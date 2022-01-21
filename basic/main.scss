@@ -1,0 +1,63 @@
+@import "./partial.scss";
+@import "./_variables.scss";
+
+// function
+@function weight($weight-name) {
+  @return map-get($font-width, $weight-name);
+}
+
+// map
+$font-width: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+// nesting
+
+body {
+  background-color: $primary-color;
+}
+
+div {
+  .main {
+    font-weight: map-get($map: $font-width, $key: bold);
+  }
+}
+
+.function {
+  #{&}__main {
+    font-weight: weight(regular);
+  }
+}
+
+// mixin
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin theme($light-theme: true) {
+  @if ($light-theme) {
+    background-color: lighten($color: $primary-color, $amount: 100%);
+    color: darken($text-color, 100%);
+  } @else {
+    background-color: darken($color: $primary-color, $amount: 100%);
+    color: lighten($text-color, 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile-size) {
+    @content;
+  }
+}
+
+.mixin {
+  @include flexCenter();
+}
+
+.light {
+  @include theme(true);
+}

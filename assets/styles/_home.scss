@@ -1,0 +1,44 @@
+.home {
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("../img/model-1.jpg") center top;
+  background-size: cover;
+  display: flex;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .home__name {
+      width: 100%;
+      font-size: 4rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid set-text-color($primary-color);
+
+      &--last {
+        color: $secondary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  footer {
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0.4rem;
+    text-align: center;
+    padding: 1rem;
+    right: 1rem;
+    color: set-text-color($primary-color);
+  }
+}

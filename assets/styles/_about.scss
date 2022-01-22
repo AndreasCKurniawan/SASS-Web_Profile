@@ -52,8 +52,40 @@
 
       h2,
       h3,
-      h6 {
+      h5 {
         margin: 0.5rem 0;
+      }
+
+      p {
+        margin-top: 1.5rem;
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  .educations {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    &__education {
+      background: lighten($color: $primary-color, $amount: 10%);
+      padding-bottom: 0.5rem;
+      border-bottom: 5px solid $secondary-color;
+      padding: 5%;
+      border-radius: 10px;
+
+      h2,
+      h3,
+      h5 {
+        margin: 0.5rem 0;
+      }
+
+      p {
+        margin-top: 1.5rem;
+        line-height: 1.2rem;
       }
     }
   }

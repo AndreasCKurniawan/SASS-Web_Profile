@@ -192,26 +192,6 @@
   color: #ff652f;
 }
 
-.menu-nav__item:nth-child(1) {
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
-}
-
-.menu-nav__item:nth-child(2) {
-  -webkit-transition-delay: 0.35s;
-          transition-delay: 0.35s;
-}
-
-.menu-nav__item:nth-child(3) {
-  -webkit-transition-delay: 0.45s;
-          transition-delay: 0.45s;
-}
-
-.menu-nav__item:nth-child(4) {
-  -webkit-transition-delay: 0.55s;
-          transition-delay: 0.55s;
-}
-
 .about {
   padding-bottom: 2rem;
 }
@@ -276,8 +256,42 @@
 
 .about .jobs__job h2,
 .about .jobs__job h3,
-.about .jobs__job h6 {
+.about .jobs__job h5 {
   margin: 0.5rem 0;
+}
+
+.about .jobs__job p {
+  margin-top: 1.5rem;
+  line-height: 1.2rem;
+}
+
+.about .educations {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+.about .educations__education {
+  background: #414141;
+  padding-bottom: 0.5rem;
+  border-bottom: 5px solid #ff652f;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+.about .educations__education h2,
+.about .educations__education h3,
+.about .educations__education h5 {
+  margin: 0.5rem 0;
+}
+
+.about .educations__education p {
+  margin-top: 1.5rem;
+  line-height: 1.2rem;
 }
 
 .about .social-icons {
@@ -496,12 +510,89 @@
   color: white;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav .menu-nav {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 100%;
+    background: transparent;
+  }
+  .nav .menu-nav__item {
+    height: 100%;
+    display: inline-block;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav .menu-nav__link {
+    font-size: 1.3rem;
+  }
+  .nav .menu-nav__link.active {
+    border-top: #ff652f solid 0.2rem;
+  }
+  .about__bio-image p {
+    font-size: 1.3rem;
+  }
+  .projects__bio-image {
+    height: 40vh;
+  }
+  .projects__items {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects__bio-image {
+    height: 50vh;
+  }
+  .projects__items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .projects__items {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 body {
   background-color: #272727;
   color: white;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -545,5 +636,30 @@ main .social-icons a:hover {
 
 .text-secondary {
   color: #ff652f;
+}
+
+.menu-nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
+.menu-nav__item:nth-child(5) {
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
 }
 /*# sourceMappingURL=main.css.map */

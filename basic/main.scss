@@ -41,10 +41,12 @@ div {
 @mixin theme($light-theme: true) {
   @if ($light-theme) {
     background-color: lighten($color: $primary-color, $amount: 100%);
-    color: darken($text-color, 100%);
+    // color: darken($text-color, 100%);
+    color: lighten($color: $primary-color, $amount: 100%);
   } @else {
     background-color: darken($color: $primary-color, $amount: 100%);
-    color: lighten($text-color, 100%);
+    // color: lighten($text-color, 100%);
+    color: lighten($color: $primary-color, $amount: 100%);
   }
 }
 

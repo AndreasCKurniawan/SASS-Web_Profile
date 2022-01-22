@@ -4,6 +4,7 @@
 @import "./about";
 @import "./project";
 @import "./contact";
+@import "./responsive";
 
 body {
   background-color: $primary-color;
@@ -11,6 +12,10 @@ body {
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1,
@@ -53,4 +58,10 @@ main {
 
 .text-secondary {
   color: $secondary-color;
+}
+
+@for $i from 1 through 5 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
 }
